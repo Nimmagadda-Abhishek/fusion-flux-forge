@@ -2,41 +2,66 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Futuristic Digital Agency Design System
+All colors MUST be HSL for perfect theming.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Dark futuristic background system */
+    --background: 222 47% 4%;
+    --foreground: 210 40% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Card system with subtle transparency */
+    --card: 222 47% 6%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    /* Popover system */
+    --popover: 222 47% 5%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary neon cyan system */
+    --primary: 180 100% 50%;
+    --primary-foreground: 222 47% 4%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary purple system */
+    --secondary: 262 83% 58%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted dark system */
+    --muted: 222 47% 8%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent neon green system */
+    --accent: 158 100% 50%;
+    --accent-foreground: 222 47% 4%;
 
-    --destructive: 0 84.2% 60.2%;
+    /* Destructive system */
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Border and input system */
+    --border: 222 47% 12%;
+    --input: 222 47% 10%;
+    --ring: 180 100% 50%;
 
-    --radius: 0.5rem;
+    /* Neon glow colors */
+    --neon-cyan: 180 100% 50%;
+    --neon-purple: 262 83% 58%;
+    --neon-green: 158 100% 50%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(222 47% 4%), hsl(222 47% 6%));
+    --gradient-neon: linear-gradient(135deg, hsl(180 100% 50% / 0.1), hsl(262 83% 58% / 0.1));
+    --gradient-hero: linear-gradient(135deg, hsl(222 47% 4%), hsl(262 83% 8%));
+    
+    /* Shadows and glows */
+    --shadow-neon-cyan: 0 0 20px hsl(180 100% 50% / 0.3);
+    --shadow-neon-purple: 0 0 20px hsl(262 83% 58% / 0.3);
+    --shadow-neon-green: 0 0 20px hsl(158 100% 50% / 0.3);
+    --shadow-elegant: 0 10px 40px hsl(222 47% 2% / 0.8);
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -101,5 +126,103 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    background: var(--gradient-primary);
+  }
+}
+
+@layer components {
+  /* Neon glow effects */
+  .glow-cyan {
+    box-shadow: var(--shadow-neon-cyan);
+  }
+  
+  .glow-purple {
+    box-shadow: var(--shadow-neon-purple);
+  }
+  
+  .glow-green {
+    box-shadow: var(--shadow-neon-green);
+  }
+
+  /* Hover glow animations */
+  .hover-glow-cyan {
+    transition: all 0.3s ease;
+  }
+  
+  .hover-glow-cyan:hover {
+    box-shadow: var(--shadow-neon-cyan);
+    transform: translateY(-2px);
+  }
+
+  .hover-glow-purple:hover {
+    box-shadow: var(--shadow-neon-purple);
+    transform: translateY(-2px);
+  }
+
+  .hover-glow-green:hover {
+    box-shadow: var(--shadow-neon-green);
+    transform: translateY(-2px);
+  }
+
+  /* Floating animation */
+  .float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  /* Pulse glow animation */
+  .pulse-glow {
+    animation: pulseGlow 2s ease-in-out infinite;
+  }
+  
+  @keyframes pulseGlow {
+    0%, 100% { 
+      box-shadow: 0 0 5px hsl(var(--neon-cyan) / 0.5);
+    }
+    50% { 
+      box-shadow: 0 0 20px hsl(var(--neon-cyan) / 0.8), 0 0 30px hsl(var(--neon-cyan) / 0.6);
+    }
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    background: linear-gradient(135deg, hsl(var(--neon-cyan)), hsl(var(--neon-purple)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Service card hover effect */
+  .service-card {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background: var(--gradient-primary);
+    border: 1px solid hsl(var(--border));
+  }
+  
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-neon);
+    transition: left 0.5s ease;
+    z-index: 0;
+  }
+  
+  .service-card:hover::before {
+    left: 0;
+  }
+  
+  .service-card > * {
+    position: relative;
+    z-index: 1;
   }
 }
