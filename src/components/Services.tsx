@@ -8,7 +8,12 @@ import {
   BarChart,
   ArrowRight,
   Zap,
-  Target
+  Target,
+  Share2,
+  MapPin,
+  Monitor,
+  Users,
+  ThumbsUp
 } from "lucide-react";
 
 const Services = () => {
@@ -29,13 +34,34 @@ const Services = () => {
     },
     {
       icon: TrendingUp,
-      title: "Paid Advertising",
-      description: "ROI-focused ad campaigns across Google, Facebook, and other platforms to maximize your marketing budget.",
-      features: ["Google Ads", "Social Media Ads", "Conversion Tracking", "A/B Testing"],
-      color: "accent",
+      title: "Social Media Marketing",
+      description: "Engaging strategies to grow and maintain your presence on major social media platforms.",
+      features: ["Content Creation", "Community Management", "Platform Growth Strategies", "Campaign Optimization"],
+      color: "info",
+    },
+    {
+      icon: MapPin,
+      title: "Google My Business Optimization",
+      description: "Optimize your business profile for maximum local visibility and customer engagement.",
+      features: ["Profile Setup", "Review Management", "Local SEO", "Image & Post Updates"],
+      color: "success",
+    },
+    {
+      icon: Monitor,
+      title: "Meta Ads & Google Ads Management",
+      description: "Targeted ad campaigns designed to reach your ideal audience on Meta and Google networks.",
+      features: ["Audience Targeting", "Campaign Creation", "Performance Tracking", "A/B Testing"],
+      color: "warning",
+    },
+    {
+      icon: Users,
+      title: "Lead Generation",
+      description: "Proven strategies to capture high-quality leads for your business.",
+      features: ["Landing Page Design", "Form Optimization", "Email Campaigns", "Retargeting"],
+      color: "danger",
     },
   ];
-
+  
   const capabilities = [
     {
       icon: Smartphone,
@@ -62,7 +88,33 @@ const Services = () => {
       title: "Lightning Fast",
       description: "Optimized for speed and Core Web Vitals",
     },
+    {
+      icon: ThumbsUp,
+      title: "Social Media Growth",
+      description: "Strategies and tools to boost engagement across platforms",
+    },
+    {
+      icon: Search,
+      title: "SEO-Driven Results",
+      description: "Built with SEO best practices to improve discoverability",
+    },
+    {
+      icon: MapPin,
+      title: "Local Business Visibility",
+      description: "Enhance your local reach with Google My Business optimization",
+    },
+    {
+      icon: Monitor,
+      title: "Targeted Ad Campaigns",
+      description: "Run precise Meta and Google Ads for better ROI",
+    },
+    {
+      icon: Users,
+      title: "Lead Nurturing",
+      description: "Systems to convert potential customers into loyal clients",
+    },
   ];
+  
 
   return (
     <section id="services" className="py-24 bg-gradient-to-b from-background to-background/50">

@@ -133,13 +133,7 @@ const Portfolio = () => {
         </section>
 
         {/* Team Section */}
-        <TeamSection 
-          title="Meet the Team Behind These Projects"
-          description="Get to know the talented professionals who bring these innovative solutions to life."
-          showAll={false}
-          maxMembers={3}
-          className="bg-background/50"
-        />
+
 
         {/* CTA Section */}
         <section className="py-20 bg-card/50">
