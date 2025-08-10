@@ -114,7 +114,7 @@ const Services = () => {
         {/* Capabilities Section */}
         <div className="text-center mb-12">
           <h3 className="text-3xl font-bold mb-4">
-            Why Choose <span className="gradient-text">FluxForge</span>?
+            Why Choose <span className="gradient-text">Asian Digital World</span>?
           </h3>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             We combine cutting-edge technology with proven strategies to deliver exceptional results.
