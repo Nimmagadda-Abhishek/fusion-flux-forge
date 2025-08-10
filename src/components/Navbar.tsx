@@ -11,7 +11,7 @@ const Navbar = () => {
     { name: 'Portfolio', href: '/portfolio' },
     { name: 'Team', href: '/team' },
     { name: 'Internships', href: '/internships' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Contact', href: '/contact' },
   ];
 
   return (
@@ -21,9 +21,13 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <div className="p-2 rounded-lg bg-gradient-to-r from-primary to-secondary">
-              <Code className="h-6 w-6 text-background" />
+              <img 
+                src="/favicon.ico" 
+                alt="Asian Digital World Logo" 
+                className="h-6 w-6"
+              />
             </div>
-            <span className="text-xl font-bold gradient-text">FluxForge</span>
+            <span className="text-xl font-bold gradient-text">Asian Digital World</span>
           </div>
 
           {/* Desktop Navigation */}

@@ -3,13 +3,14 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github } from "lucide-react";
 import Navbar from "@/components/Navbar";
+import TeamSection from "@/components/TeamSection";
 
 const Portfolio = () => {
   const projects = [
     {
       title: "E-Commerce Platform",
       description: "Full-stack e-commerce solution with React, Node.js, and Stripe integration. Features real-time inventory management and advanced analytics.",
-      image: "/placeholder.svg",
+      image: "https://i.pinimg.com/originals/ba/0e/b8/ba0eb82dbe74fb21925083c2ea7475b4.jpg",
       tags: ["React", "Node.js", "MongoDB", "Stripe", "AWS"],
       category: "Web Development",
       metrics: { traffic: "+250%", conversion: "+45%", performance: "98/100" },
@@ -25,15 +26,6 @@ const Portfolio = () => {
       client: "FitLife Solutions"
     },
     {
-      title: "SaaS Analytics Dashboard",
-      description: "Real-time analytics platform for SaaS companies with custom reporting and data visualization capabilities.",
-      image: "/placeholder.svg",
-      tags: ["Vue.js", "Django", "PostgreSQL", "D3.js", "Docker"],
-      category: "Web Development",
-      metrics: { users: "10K+", performance: "99.9%", satisfaction: "4.9/5" },
-      client: "DataFlow Corp."
-    },
-    {
       title: "Digital Marketing Campaign",
       description: "Multi-channel digital marketing strategy that increased client's online presence and lead generation.",
       image: "/placeholder.svg",
@@ -42,24 +34,6 @@ const Portfolio = () => {
       metrics: { leads: "+300%", ctr: "+125%", roas: "450%" },
       client: "GrowthTech Ltd."
     },
-    {
-      title: "AI-Powered Chatbot",
-      description: "Intelligent customer service chatbot with natural language processing and integration with existing CRM systems.",
-      image: "/placeholder.svg",
-      tags: ["Python", "NLP", "TensorFlow", "REST API", "AWS Lambda"],
-      category: "Machine Learning",
-      metrics: { resolution: "90%", satisfaction: "4.7/5", response: "<1s" },
-      client: "ServicePro Inc."
-    },
-    {
-      title: "Data Analytics Platform",
-      description: "Comprehensive data analytics solution for manufacturing company to optimize operations and reduce costs.",
-      image: "/placeholder.svg",
-      tags: ["Python", "Pandas", "Tableau", "MySQL", "Apache Airflow"],
-      category: "Data Analytics",
-      metrics: { cost_savings: "30%", efficiency: "+40%", accuracy: "99.2%" },
-      client: "ManufacturePlus"
-    }
   ];
 
   const categories = ["All", "Web Development", "App Development", "Digital Marketing", "Machine Learning", "Data Analytics"];
@@ -157,6 +131,15 @@ const Portfolio = () => {
             </div>
           </div>
         </section>
+
+        {/* Team Section */}
+        <TeamSection 
+          title="Meet the Team Behind These Projects"
+          description="Get to know the talented professionals who bring these innovative solutions to life."
+          showAll={false}
+          maxMembers={3}
+          className="bg-background/50"
+        />
 
         {/* CTA Section */}
         <section className="py-20 bg-card/50">

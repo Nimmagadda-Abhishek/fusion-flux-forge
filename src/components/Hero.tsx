@@ -27,8 +27,7 @@ const Hero = () => {
         </div>
 
         {/* Main Heading */}
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 animate-slide-up">
-          <span className="gradient-text">ROI-Driven</span> Digital Solutions
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 animate-slide-up">Digital Solutions
           <br />
           <span className="text-foreground">for Modern Businesses</span>
         </h1>

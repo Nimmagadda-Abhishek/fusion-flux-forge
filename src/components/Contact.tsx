@@ -17,19 +17,19 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email Us",
-      details: "hello@fluxforge.com",
+      details: "asiandigitalworld@gmail.com",
       description: "Get a response within 24 hours"
     },
     {
       icon: Phone,
       title: "Call Us",
-      details: "+1 (555) 123-4567",
+      details: "+91 8464960327",
       description: "Mon-Fri 9AM-6PM EST"
     },
     {
       icon: MapPin,
       title: "Visit Us",
-      details: "San Francisco, CA",
+      details: "Kukatpally, Hyderabad, Telangana 500085",
       description: "Remote team worldwide"
     }
   ];
