@@ -36,9 +36,9 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Visit Us",
-      details: "Kukatpally, Hyderabad, Telangana 500085",
+      details: "Asian Digital World Private limited",
       description: "Remote team worldwide",
-      action: "https://maps.google.com/?q=Kukatpally,Hyderabad,Telangana"
+      action: "https://maps.app.goo.gl/MhPMnLWqJVAGTbXA7 "
     }
   ];
 
