@@ -46,7 +46,7 @@ export const teamMembers: TeamMember[] = [
     specialization: "Operations & Strategy",
   },
   {
-    name: "Siddhu",
+    name: "Pinnepe Siddhu",
     role: "Managing Director",
     image: "https://ik.imagekit.io/ya7vx4agl/New%20Folder/cropped_circle_image.png?updatedAt=1752604967530", // You can update this with actual image URL
     bio: "Experienced business leader with a track record of scaling technology companies. Focuses on strategic partnerships, market expansion, and driving innovation across all business verticals.",
