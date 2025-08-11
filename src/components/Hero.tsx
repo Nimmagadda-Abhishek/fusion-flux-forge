@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, Star } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
@@ -50,10 +51,12 @@ const Hero = () => {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in" style={{ animationDelay: '0.9s' }}>
-          <Button variant="hero" size="lg" className="group">
-            Start Your Project
-            <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-          </Button>
+          <Link to="/contact">
+            <Button variant="hero" size="lg" className="group">
+              Start Your Project
+              <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+            </Button>
+          </Link>
           <Button variant="outline" size="lg" className="group">
             <Play className="h-5 w-5 mr-2" />
             Watch Demo

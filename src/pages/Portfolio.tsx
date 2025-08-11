@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github } from "lucide-react";
 import Navbar from "@/components/Navbar";
+import { Link } from "react-router-dom";
 import TeamSection from "@/components/TeamSection";
 
 const Portfolio = () => {
@@ -10,29 +11,29 @@ const Portfolio = () => {
     {
       title: "E-Commerce Platform",
       description: "Full-stack e-commerce solution with React, Node.js, and Stripe integration. Features real-time inventory management and advanced analytics.",
-      image: "https://i.pinimg.com/originals/ba/0e/b8/ba0eb82dbe74fb21925083c2ea7475b4.jpg",
+      image: "https://www.imaginetventures.com/wp-content/uploads/2024/01/5467393_1687-scaled.jpg",
       tags: ["React", "Node.js", "MongoDB", "Stripe", "AWS"],
       category: "Web Development",
       metrics: { traffic: "+250%", conversion: "+45%", performance: "98/100" },
-      client: "RetailMax Inc."
+      
     },
     {
       title: "Mobile Fitness App",
       description: "Cross-platform mobile app for fitness tracking with AI-powered workout recommendations and social features.",
-      image: "/placeholder.svg",
+      image: "https://riseuplabs.com/wp-content/uploads/2021/07/mobile-application-development-guidelines-riseuplabs.jpg",
       tags: ["React Native", "Python", "TensorFlow", "Firebase"],
       category: "App Development",
       metrics: { downloads: "50K+", rating: "4.8/5", retention: "85%" },
-      client: "FitLife Solutions"
+      
     },
     {
       title: "Digital Marketing Campaign",
       description: "Multi-channel digital marketing strategy that increased client's online presence and lead generation.",
-      image: "/placeholder.svg",
+      image: "https://digitalmarketingskill.com/wp-content/uploads/elementor/thumbs/Digital-marketing-campaign-ql28k81grfhlf9qokomd3dkhdbchul8zipyr83tcp4.webp",
       tags: ["Google Ads", "Facebook Ads", "SEO", "Content Marketing"],
       category: "Digital Marketing",
       metrics: { leads: "+300%", ctr: "+125%", roas: "450%" },
-      client: "GrowthTech Ltd."
+      
     },
   ];
 
@@ -75,19 +76,29 @@ const Portfolio = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {projects.map((project, index) => (
                 <Card key={project.title} className="group border border-border/50 hover:border-primary/50 transition-all duration-300 hover:scale-105 hover-glow-cyan overflow-hidden">
-                  <div className="aspect-video bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 relative overflow-hidden">
-                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
+                  <div className="aspect-video relative overflow-hidden">
+                    <img 
+                      src={project.image} 
+                      alt={project.title}
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                      loading="lazy"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.src = 'https://via.placeholder.com/600x400/6366f1/ffffff?text=Image+Not+Found';
+                      }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
                     <div className="absolute top-4 left-4">
-                      <Badge variant="secondary">{project.category}</Badge>
+                      <Badge variant="secondary" className="bg-black/50 backdrop-blur-sm border-none">
+                        {project.category}
+                      </Badge>
                     </div>
                     <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <div className="flex space-x-2">
-                        <Button size="sm" variant="secondary">
-                          <ExternalLink className="h-4 w-4" />
-                        </Button>
-                        <Button size="sm" variant="secondary">
-                          <Github className="h-4 w-4" />
-                        </Button>
+                      <div className="flex gap-2">
+                        <Badge variant="outline" className="bg-black/50 backdrop-blur-sm border-white/20 text-white">
+                          <ExternalLink className="w-3 h-3 mr-1" />
+                          View
+                        </Badge>
                       </div>
                     </div>
                   </div>
@@ -121,9 +132,7 @@ const Portfolio = () => {
                       </div>
                       
                       {/* Client */}
-                      <div className="text-sm text-muted-foreground">
-                        Client: <span className="font-medium">{project.client}</span>
-                      </div>
+                      
                     </div>
                   </CardContent>
                 </Card>
@@ -143,8 +152,10 @@ const Portfolio = () => {
               Let's discuss how we can help you achieve similar results for your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/contact">
               <Button size="lg">Get Free Consultation</Button>
               <Button variant="outline" size="lg">View Case Studies</Button>
+              </Link>
             </div>
           </div>
         </section>

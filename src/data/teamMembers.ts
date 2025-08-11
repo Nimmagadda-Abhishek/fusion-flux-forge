@@ -29,7 +29,7 @@ export const teamMembers: TeamMember[] = [
   },
   {
     name: "Nimmagadda Abhishek",
-    role: "Senior Developer",
+    role: "Developer",
     image: "https://media.licdn.com/dms/image/v2/D5603AQHLkiML0bYOug/profile-displayphoto-crop_800_800/B56ZgPBnBNGUAQ-/0/1752598739464?e=1758153600&v=beta&t=jA6dr6CrORIEnV19lAmKrD1whNKCUmCNDxZty1bF3hQ", // You can update this with actual image URL
     bio: "Full-stack developer with expertise in modern web technologies. Passionate about creating scalable, user-friendly applications that drive business growth and enhance user experience.",
     skills: ["React", "Node.js", "Python", "MongoDB", "AWS", "TypeScript"],
