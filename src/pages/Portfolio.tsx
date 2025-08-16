@@ -37,7 +37,7 @@ const Portfolio = () => {
     },
   ];
 
-  const categories = ["All", "Web Development", "App Development", "Digital Marketing", "Machine Learning", "Data Analytics"];
+  const categories = ["All", "Web Development", "App Development", "Digital Marketing"];
 
   return (
     <div className="min-h-screen">
