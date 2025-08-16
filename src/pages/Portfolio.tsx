@@ -93,14 +93,6 @@ const Portfolio = () => {
                         {project.category}
                       </Badge>
                     </div>
-                    <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <div className="flex gap-2">
-                        <Badge variant="outline" className="bg-black/50 backdrop-blur-sm border-white/20 text-white">
-                          <ExternalLink className="w-3 h-3 mr-1" />
-                          View
-                        </Badge>
-                      </div>
-                    </div>
                   </div>
                   
                   <CardHeader>
