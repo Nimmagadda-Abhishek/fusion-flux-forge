@@ -9,7 +9,7 @@ import TeamSection from "@/components/TeamSection";
 const Portfolio = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
+      title: "E-Commerce Platforms",
       description: "Full-stack e-commerce solution with React, Node.js, and Stripe integration. Features real-time inventory management and advanced analytics.",
       image: "https://www.imaginetventures.com/wp-content/uploads/2024/01/5467393_1687-scaled.jpg",
       tags: ["React", "Node.js", "MongoDB", "Stripe", "AWS"],
@@ -18,8 +18,8 @@ const Portfolio = () => {
       
     },
     {
-      title: "Mobile Fitness App",
-      description: "Cross-platform mobile app for fitness tracking with AI-powered workout recommendations and social features.",
+      title: "Mobile Apps",
+      description: "We develop cross-platform mobile apps for clients, integrating AI-powered features and social functionality tailored to their needs.",
       image: "https://riseuplabs.com/wp-content/uploads/2021/07/mobile-application-development-guidelines-riseuplabs.jpg",
       tags: ["React Native", "Python", "TensorFlow", "Firebase"],
       category: "App Development",
